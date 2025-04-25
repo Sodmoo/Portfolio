@@ -1,3 +1,4 @@
+//write repeater
 const texts = [
     "WEB_DEVELOPER",
     "MOBILE_DEVELOPER",
@@ -28,4 +29,20 @@ function eraseText(){
         setTimeout(typeWriter, 500)
     }
 }
-window.onload = typeWriter
+window.onload = typeWriter;
+
+
+//resume section click tab-list
+const resumelists=document.querySelectorAll('.resume-list');
+const resumeboxs=document.querySelectorAll('.resume-box');
+resumelists.forEach((list,idx)=>{
+    list.addEventListener('click',()=>{
+        document.querySelector('.resume-list.active').classList.remove('active');
+        list.classList.add('active');
+
+        document.querySelector('.resume-box.active').classList.remove('active');
+        resumeboxs[idx].classList.add('active');
+    });
+});
+
+

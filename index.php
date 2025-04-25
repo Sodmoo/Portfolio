@@ -1,122 +1,235 @@
+<?php
+// Load cards from a JSON file
+$cardsFile = 'cards.json';
+$cards = file_exists($cardsFile) ? json_decode(file_get_contents($cardsFile), true) : [];
+
+// Handle new card submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
+    $newCard = htmlspecialchars(trim($_POST['card_text']));
+    if ($newCard !== '') {
+        $cards[] = $newCard;
+        file_put_contents($cardsFile, json_encode($cards));
+        header("Location: " . $_SERVER['PHP_SELF']); // refresh page
+        exit;
+    }
+}
+?>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Portfolio</title>
 </head>
+
 <body>
     <nav class="nav">
         <ul class="nav-list">
             <li>
-            <i class='bx bx-home'></i>
-            <span class="tooltip">Home</span>
+                <i class='bx bx-home'></i>
+                <span class="tooltip">Home</span>
             </li>
             <li>
-            <i class='bx bx-user'></i>
-            <span class="tooltip">About</span>
+                <i class='bx bx-user'></i>
+                <span class="tooltip">About</span>
             </li>
             <li>
-            <i class='bx bx-detail' ></i>
-            <span class="tooltip">Resume</span>
+                <i class='bx bx-detail'></i>
+                <span class="tooltip">Resume</span>
             </li>
             <li>
-            <i class='bx bx-code-block'></i>
-            <span class="tooltip">Project</span>
+                <i class='bx bx-code-block'></i>
+                <span class="tooltip">Project</span>
             </li>
             <li>
-            <i class='bx bx-message-rounded'></i>
-            <span class="tooltip">Contact</span>
+                <i class='bx bx-message-rounded'></i>
+                <span class="tooltip">Contact</span>
             </li>
             <li>
-            <i class='bx bx-log-in'></i>
-            <span class="tooltip">Login</span>
+                <i class='bx bx-log-in'></i>
+                <span class="tooltip">Login</span>
             </li>
-            
+
         </ul>
     </nav>
 
     <div class="container">
         <div class="box">
-           <section class="section home">
-               <div class="home-info">
-                 <h3>Hello everyone</h3>
-                 <h1>I'm Monster</h1>
-                 <h3>This is my personal portfolio page</h3>
-                 <br>
-                 <br>
-                 <div class="btn-sci">
-                    <a href="" class="btn">Lets Start</a>
-                    <div class="social-links">
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i><span class="social-tooltip">Github</span></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i><span class="social-tooltip">Facebook</span></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i><span class="social-tooltip">Linked</span></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i><span class="social-tooltip">Twitter</span></a>
+            <section class="section home">
+                <div class="home-info">
+                    <h3>Hello everyone</h3>
+                    <h1>I'm Monster</h1>
+                    <h3>This is my personal portfolio page</h3>
+                    <br>
+                    <br>
+                    <div class="btn-sci">
+                        <a href="" class="btn">Lets Start</a>
+                        <div class="social-links">
+                            <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i><span class="social-tooltip">Github</span></a>
+                            <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i><span class="social-tooltip">Facebook</span></a>
+                            <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i><span class="social-tooltip">Linked</span></a>
+                            <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i><span class="social-tooltip">Twitter</span></a>
+                        </div>
                     </div>
-                 </div>
                 </div>
 
                 <div class="imgwrapper">
                     <div class="img-box home-img">
-                    <dotlottie-player
-                     src="https://lottie.host/555d62f0-7fe5-4ec4-b4cd-f21d18ef028f/aHGB1TVXag.lottie"
-                      background="transparent"
-                      speed="1"
-                      style="
+                        <dotlottie-player
+                            src="https://lottie.host/555d62f0-7fe5-4ec4-b4cd-f21d18ef028f/aHGB1TVXag.lottie"
+                            background="transparent"
+                            speed="1"
+                            style="
                       position: absolute;
                       top: 15px;
                       display: block;
                       object-fit: cover;"
-                      loop
-                      autoplay
-                    ></dotlottie-player>
+                            loop
+                            autoplay></dotlottie-player>
 
                     </div>
                 </div>
-           </section>
+            </section>
 
-           <section class="section about">
+            <section class="section about">
                 <div class="imgwrapper">
                     <div class="img-container about-img">
-                       <img src="images/images.jpg" alt="">
+                        <img src="images/images.jpg" alt="">
                     </div>
                 </div>
 
                 <div class="about-info">
                     <h2 class="title">About Me</h2>
-                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900"> <h3>I'm a <span class="typewriter-text"></span><label for="">|</label></h3></div>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                        <h3>I'm a <span class="typewriter-text"></span><label for="">|</label></h3>
+                    </div>
                     <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100"></p>
                     <p class="desc">ahnggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggE bingvbionae'bgion'gne'igbn'a</p>
                     <a href="" class="btn2">View More</a>
                     <div class="about-social-links">
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-google"></i><span class="social-tooltip">Gmail</span></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-square-threads"></i><span class="social-tooltip">Threads</span></a>
+                        <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-google"></i><span class="social-tooltip">Gmail</span></a>
+                        <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-square-threads"></i><span class="social-tooltip">Threads</span></a>
                     </div>
                 </div>
 
-                
-           </section>
+
+            </section>
+            <section class="section resume">
+                <h2 class="title">Resume</h2>
+                <div class="tab-box">
+                    <div class="tab-list resume-list active">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="tab-list resume-list">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="tab-list resume-list">
+                        <h3>Education</h3>
+                    </div>
+                </div>
+                <div class="tab-wrapper">
+                    <div class="tab-grid resume-box experience active">
+                        <div class="slider">
+                            <div class="carousel-wrapper">
+                                <div class="arrow left-arrow" onclick="rotateByArrow(1)">‹</div>
+                                <div class="arrow right-arrow" onclick="rotateByArrow(-1)">›</div>
+
+                                <div class="carousel" id="carousel">
+                                    <?php
+                                    $count = count($cards);
+                                    foreach ($cards as $i => $text):
+                                        $angle = $i * (360 / max($count, 1));
+                                    ?>
+                                        <div class="card" style="transform: rotateY(<?= $angle ?>deg) translateZ(400px);">
+                                            <?= $text ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-grid resume-box experience">
+                        <div class="tab-item resume-item">
+                            <p>skills</p>
+                        </div>
+                    </div>
+                    <div class="tab-grid resume-box experience">
+                        <div class="tab-item resume-item">
+                            <p>education</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
         </div>
     </div>
 
-   
+
 
 
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({offset:0});
+        AOS.init({
+            offset: 0
+        });
     </script>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
     <script
-      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
+        src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+        type="module"></script>
+    <script>
+        const carousel = document.getElementById('carousel');
+        let isDragging = false;
+        let startX = 0;
+        let currentRotation = 0;
+        let lastX = 0;
+
+        function updateRotation() {
+            carousel.style.transform = `rotateY(${currentRotation}deg)`;
+        }
+
+        // Smooth Drag / Touch Control
+        function startDrag(x) {
+            isDragging = true;
+            startX = x;
+            lastX = x;
+        }
+
+        function onDrag(x) {
+            if (!isDragging) return;
+            const deltaX = x - lastX;
+            currentRotation += deltaX * 0.3;
+            updateRotation();
+            lastX = x;
+        }
+
+        function stopDrag() {
+            isDragging = false;
+        }
+
+        // Mouse Events
+        carousel.addEventListener('mousedown', e => startDrag(e.pageX));
+        document.addEventListener('mousemove', e => onDrag(e.pageX));
+        document.addEventListener('mouseup', stopDrag);
+
+        // Touch Events
+        carousel.addEventListener('touchstart', e => startDrag(e.touches[0].clientX));
+        document.addEventListener('touchmove', e => onDrag(e.touches[0].clientX));
+        document.addEventListener('touchend', stopDrag);
+
+        // Arrow Button Control
+        function rotateByArrow(dir) {
+            currentRotation += dir * (360 / <?= max(count($cards), 1) ?>);
+            updateRotation();
+        }
+    </script>
 </body>
+
 </html>
