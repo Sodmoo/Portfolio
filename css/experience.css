@@ -1,0 +1,87 @@
+
+.slider {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    perspective: 1000px;
+}
+.carousel {
+    width: 200px;
+    height: 280px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.card {
+    position: absolute;
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transform-style: preserve-3d;
+    background-color: #B3EFFF;
+}
+.controls {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.form-container {
+    text-align: center;
+}
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 6px;
+}
+button[type="submit"] {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+    border-radius: 10px;
+}
+
+.left-arrow {
+    left: -400px;
+}
+.right-arrow {
+    right: -400px;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

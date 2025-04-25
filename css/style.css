@@ -14,6 +14,7 @@
     --bg_color: #171f2b;
     --main_color: aqua;
     --main_color2: rgb(250, 215, 20);
+    --main_color3: #8804FF;
     --nav_color: rgb(40, 250, 21);
     --white_color: #fff;
     --tab_list_color: #7c8594;
@@ -121,6 +122,7 @@ p {
     transform: translateZ(-100vw) rotateY(-180deg);
     transform-origin: 50%;
 }
+/****HOME Section****/
 .home,
 .about {
     display: flex;
@@ -217,6 +219,8 @@ p {
     transition: 1s;
     margin-left: 150px;
 }
+
+/****ABOUT Section****/
 .img-container {
     position: relative;
     width: 32vw;
@@ -310,9 +314,13 @@ p {
     opacity: 1;
 }
 
+/****RESUME Section****/
 .resume {
     padding-top: 100px;
-    padding-bottom: 200px;
+    padding-bottom: 170px;
+}
+.resume h2{
+    color: var(--main_color3);
 }
 .tab-box {
     display: flex;
@@ -331,8 +339,8 @@ p {
     transition: 0.5s;
 }
 .tab-list.resume-list.active {
-    border-color: var(--main_color);
-    color: var(--main_color);
+    border-color: var(--main_color3);
+    color: var(--main_color3);
 }
 .resume-list:nth-child(2) {
     justify-content: center;
@@ -353,9 +361,8 @@ p {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-    overflow-y: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 10px;
     overflow-x: hidden;
     visibility: hidden;
     opacity: 0;
@@ -367,90 +374,12 @@ p {
     transform: scale(1);
     transition: 0.5s;
 }
-
-
-.slider {
-    margin: 0;
-    font-family: sans-serif;
+.education-item{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
+    background: var(--main_color3);
+    border-radius: .8rem;
+    padding: 2rem;
 }
 
-.carousel-wrapper {
-    perspective: 1000px;
-}
-.carousel {
-    width: 200px;
-    height: 280px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-.card {
-    position: absolute;
-    width: 200px;
-    height: 280px;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    text-align: center;
-    transform-style: preserve-3d;
-}
-.controls {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.controls button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background: #444;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.form-container {
-    text-align: center;
-}
-input[type="text"] {
-    padding: 10px;
-    width: 200px;
-    border: none;
-    border-radius: 6px;
-}
-button[type="submit"] {
-    padding: 10px 20px;
-    margin-left: 10px;
-    background: #28a745;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 2;
-    user-select: none;
-    border-radius: 10px;
-}
-
-.left-arrow {
-    left: -400px;
-}
-.right-arrow {
-    right: -400px;
-}
-
-.arrow:hover {
-    background: rgba(255, 255, 255, 0.2);
-}

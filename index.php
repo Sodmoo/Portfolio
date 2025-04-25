@@ -20,8 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/experience.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Portfolio</title>
 </head>
@@ -152,14 +155,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                             </div>
                         </div>
                     </div>
+
                     <div class="tab-grid resume-box experience">
                         <div class="tab-item resume-item">
-                            <p>skills</p>
+                            <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <i class="fab fa-html5 skill-icon" style="color: #e44d26;"></i>
+                                        <h3>HTML</h3>
+                                    </div>
+                                    <div class="card-back">
+                                    <i class="fas fa-arrow-left back-icon top-left-icon"></i> <!-- Icon for top-left corner -->
+    
+                                        <h3>HTML5</h3>
+                                        <div class="skill-bar" data-percent="90%">
+                                            <div class="skill-fill html"><span>90%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                  
+                        
                     </div>
                     <div class="tab-grid resume-box experience">
                         <div class="tab-item resume-item">
-                            <p>education</p>
+                            <div class="education-item">
+                            <h4>2022</h4>
+                            <h4>Их Сургууль</h4>
+                            <h4>ИХ Засаг Үндэсний инжинер технологийн Их Сургууль</h4>
+                            <p>aaaaaaaaaaaa</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -180,10 +206,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
             offset: 0
         });
     </script>
-    <script src="scripts.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/skills.js"></script>
     <script
         src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-        type="module"></script>
+        type="module">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         const carousel = document.getElementById('carousel');
         let isDragging = false;
@@ -195,7 +224,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
             carousel.style.transform = `rotateY(${currentRotation}deg)`;
         }
 
-        // Smooth Drag / Touch Control
         function startDrag(x) {
             isDragging = true;
             startX = x;
@@ -214,17 +242,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
             isDragging = false;
         }
 
-        // Mouse Events
+        // Mouse 
         carousel.addEventListener('mousedown', e => startDrag(e.pageX));
         document.addEventListener('mousemove', e => onDrag(e.pageX));
         document.addEventListener('mouseup', stopDrag);
 
-        // Touch Events
+        // Touch 
         carousel.addEventListener('touchstart', e => startDrag(e.touches[0].clientX));
         document.addEventListener('touchmove', e => onDrag(e.touches[0].clientX));
         document.addEventListener('touchend', stopDrag);
 
-        // Arrow Button Control
+        // Arrow 
         function rotateByArrow(dir) {
             currentRotation += dir * (360 / <?= max(count($cards), 1) ?>);
             updateRotation();
