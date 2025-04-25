@@ -22,10 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/skills.css">
-    <link rel="stylesheet" href="./css/experience.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resume.css">
     <title>Portfolio</title>
 </head>
 
@@ -165,8 +164,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                                         <h3>HTML</h3>
                                     </div>
                                     <div class="card-back">
-                                    <i class="fas fa-arrow-left back-icon top-left-icon"></i> <!-- Icon for top-left corner -->
-    
+                                        <i class="fas fa-arrow-left back-icon top-left-icon"></i> <!-- Icon for top-left corner -->
+
                                         <h3>HTML5</h3>
                                         <div class="skill-bar" data-percent="90%">
                                             <div class="skill-fill html"><span>90%</span></div>
@@ -175,18 +174,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                                 </div>
                             </div>
                         </div>
-                  
-                        
                     </div>
-                    <div class="tab-grid resume-box experience">
-                        <div class="tab-item resume-item">
-                            <div class="education-item">
-                            <h4>2022</h4>
+
+                    <div class="education-grid resume-box experience">
+                        <div class="education-item resume-item">
+                        <h4>2022</h4>
                             <h4>Их Сургууль</h4>
                             <h4>ИХ Засаг Үндэсний инжинер технологийн Их Сургууль</h4>
                             <p>aaaaaaaaaaaa</p>
-                            </div>
-                        </div>
+                        </div>   
                     </div>
                 </div>
             </section>
