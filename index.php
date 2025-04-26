@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/resume.css">
     <title>Portfolio</title>
@@ -177,12 +178,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                     </div>
 
                     <div class="education-grid resume-box experience">
-                        <div class="education-item resume-item">
-                        <h4>2022</h4>
-                            <h4>Их Сургууль</h4>
-                            <h4>ИХ Засаг Үндэсний инжинер технологийн Их Сургууль</h4>
-                            <p>aaaaaaaaaaaa</p>
-                        </div>   
+                        <div class="tab-item resume-item">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+
+                                    <!-- Education Card 1 -->
+                                    <div class="swiper-slide">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <h2>Bachelor of Computer Science</h2>
+                                        <h4>University of XYZ</h4>
+                                        <p>2018 - 2022</p>
+                                    </div>
+
+                                    <!-- Education Card 2 -->
+                                    <div class="swiper-slide">
+                                        <i class="fas fa-school"></i>
+                                        <h2>High School Diploma</h2>
+                                        <h4>ABC High School</h4>
+                                        <p>2016 - 2018</p>
+                                    </div>
+
+                                    <!-- Experience Card 1 -->
+                                    <div class="swiper-slide">
+                                        <i class="fas fa-briefcase"></i>
+                                        <h2>Frontend Developer</h2>
+                                        <h4>Awesome Tech Company</h4>
+                                        <p>2022 - Present</p>
+                                    </div>
+
+                                    <!-- Experience Card 2 -->
+                                    <div class="swiper-slide">
+                                        <i class="fas fa-briefcase"></i>
+                                        <h2>Intern - Web Developer</h2>
+                                        <h4>Startup XYZ</h4>
+                                        <p>Summer 2021</p>
+                                    </div>
+
+                                </div>
+
+                                <!-- Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -197,19 +236,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 0
-        });
-    </script>
     <script src="./js/scripts.js"></script>
-    <script src="./js/skills.js"></script>
+    <script src="./js/resume.js"></script>
     <script
         src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
         type="module">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script>
+        AOS.init({
+            offset: 0
+        });
+
         const carousel = document.getElementById('carousel');
         let isDragging = false;
         let startX = 0;
@@ -252,7 +292,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
         function rotateByArrow(dir) {
             currentRotation += dir * (360 / <?= max(count($cards), 1) ?>);
             updateRotation();
-        }
+        };
+
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            cardsEffect: {
+                slideShadows: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
     </script>
 </body>
 

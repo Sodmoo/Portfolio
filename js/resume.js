@@ -1,6 +1,4 @@
 AOS.init();
-
-// Intersection Observer to animate the skill bars when in view
 const skillBars = document.querySelectorAll('.skill-bar');
 
 const observer = new IntersectionObserver((entries) => {

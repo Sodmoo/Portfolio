@@ -376,43 +376,5 @@ p {
     transform: scale(1);
     transition: 0.5s;
 }
-.education-grid {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 10px;
-    overflow-x: hidden;
-    visibility: hidden;
-    opacity: 0;
-    transform: scale(0.8);
-}
-.education-grid.resume-box.active {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-    transition: 0.5s;
-}
-.education-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-height: 250px;
-    background: var(--third_bg);
-    border-radius: .8rem;
-    padding: 2rem;
-}
-.education-item h4{
-    font-size: 20px;
-}
-.resume-item h4:nth-child(1),.resume-item h4:nth-child(3){
-  font-size: 22px;
-  color: var(--main_color);
-  font-weight: 450;
-}
-.resume-item h4:nth-child(3){
-    position: relative;
-    color: var(--white_color);
-}
+
 
