@@ -24,8 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/resume.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Portfolio</title>
 </head>
 
@@ -237,13 +237,107 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                     </div>
                 </div>
                 <div class="tab-wrapper portfolio">
-                    <div class="tab-grid portfolio-box">
-                        <div class="portfolio-project">
-                            <p>asfasfsa</p>
+                    <div class="tab-grid portfolio-box work active">
+                        <div class="tab-item portfolio-item">
+                            <div class="work-slider">
+                            <div class="carousel">
+                                <div class="carousel__body">
+                                    <div class="carousel__prev"><i class="far fa-angle-left"></i>
+                                    </div>
+                                    <div class="carousel__next"><i class="far fa-angle-right"></i></div>
+                                    <div class="carousel__slider">
+                                        
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>2</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>3</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>4</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>5</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>6</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>7</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>8</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>9</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel__slider__item">
+                                            <div class="item__3d-frame">
+                                                <div class="item__3d-frame__box item__3d-frame__box--front">
+                                                    <h1>10</h1>
+                                                </div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab-grid portfolio-box">
-                        
+                    <div class="tab-grid portfolio-box service">
+                        <div class="tab-item portfolio-item">
+                            <p>service</p>
+                        </div>
                     </div>
                 </div>
 
@@ -251,10 +345,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
             </section>
         </div>
     </div>
-    
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/resume.js"></script>
+    <script src="./js/work.js"></script>
     <script
         src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
         type="module">
