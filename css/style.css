@@ -14,12 +14,14 @@
     --bg_color: #171f2b;
     --second_bg: #1f2733;
     --third_bg:#2d3542;
-    --main_color: aqua;
+    --main_color: rgba(24, 244, 252, 0.952);
     --main_color2: rgb(250, 215, 20);
     --main_color3: #8804FF;
+    --main_color4:#f19a3e;
     --nav_color: rgb(40, 250, 21);
     --white_color: #fff;
     --tab_list_color: #7c8594;
+    --resume_color:#b3efff;
 }
 ::selection {
     background-color: var(--main_color);
@@ -104,7 +106,7 @@ p {
     height: 100%;
     transform-style: preserve-3d;
     transform-origin: 50% 50% -50vw;
-    transform: rotateY(-180deg);
+    transform: rotateY(-270deg);
 }
 .section {
     position: absolute;
@@ -123,6 +125,9 @@ p {
 .section.resume {
     transform: translateZ(-100vw) rotateY(-180deg);
     transform-origin: 50%;
+}
+.section.portfolio{
+    transform: translateX(-50vw) translateZ(-50vw) rotateY(-90deg);
 }
 /****HOME Section****/
 .home,
@@ -317,7 +322,7 @@ p {
 }
 
 /****RESUME Section****/
-.resume {
+.resume,.portfolio{
     padding-top: 100px;
     padding-bottom: 170px;
 }
@@ -356,7 +361,7 @@ p {
 .tab-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 .tab-grid {
     position: absolute;
@@ -370,11 +375,26 @@ p {
     opacity: 0;
     transform: scale(0.8);
 }
-.tab-grid.resume-box.active {
+.tab-grid.resume-box.active,.tab-grid.portfolio-box.active{
     visibility: visible;
     opacity: 1;
     transform: scale(1);
     transition: 0.5s;
 }
-
-
+/*****PORTFOLIO***/
+.portfolio-list:nth-child(2){
+    justify-content: flex-end;
+}
+.portfolio h2{
+    color: var(--main_color4);
+}
+.tab-list.portfolio-list.active{
+    border-color: var(--main_color4);
+    color: var(--main_color4);
+}
+.tab-wrapper.portfolio{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    background-color: var(--third_bg);
+}

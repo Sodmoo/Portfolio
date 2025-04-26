@@ -177,7 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                         </div>
                     </div>
 
-                    <div class="education-grid resume-box experience">
+                    <div class="tab-grid resume-box experience">
                         <div class="tab-item resume-item">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
@@ -226,7 +226,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                 </div>
             </section>
 
+            <section class="section portfolio">
+                <h2 class="title">My Portfolio</h2>
+                <div class="tab-box">
+                    <div class="tab-list portfolio-list active">
+                        <h3>My Projects</h3>
+                    </div>
+                    <div class="tab-list portfolio-list">
+                        <h3>My Service</h3>
+                    </div>
+                </div>
+                <div class="tab-wrapper portfolio">
+                    <div class="tab-grid portfolio-box project">
+                        <div class="tab-item portfolio-item">
+                            <p>project</p>
+                        </div>
+                    </div>
+                    <div class="tab-grid portfolio-box service">
+                        <div class="tab-item portfolio-item">
+                            <p>service</p>
+                        </div>
+                    </div>
+                </div>
 
+
+            </section>
         </div>
     </div>
 
@@ -236,7 +260,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/resume.js"></script>
     <script
         src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"

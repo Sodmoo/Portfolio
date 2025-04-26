@@ -44,5 +44,17 @@ resumelists.forEach((list,idx)=>{
         resumeboxs[idx].classList.add('active');
     });
 });
+const portfoliolists=document.querySelectorAll('.portfolio-list');
+const portfolioboxs=document.querySelectorAll('.portfolio-box');
+portfoliolists.forEach((list,idx)=>{
+    list.addEventListener('click',()=>{
+        document.querySelector('.portfolio-list.active').classList.remove('active');
+        list.classList.add('active');
+
+        document.querySelector('.portfolio-box.active').classList.remove('active');
+        portfolioboxs[idx].classList.add('active');
+    });
+});
+
 
 

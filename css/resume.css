@@ -1,3 +1,17 @@
+:root {
+    --nav_back_color: rgba(255, 225, 255, 0.1);
+    --bg_color: #171f2b;
+    --second_bg: #1f2733;
+    --third_bg:#2d3542;
+    --main_color: #00feba;
+    --main_color2: rgb(250, 215, 20);
+    --main_color3: #8804FF;
+    --nav_color: rgb(40, 250, 21);
+    --white_color: #fff;
+    --tab_list_color: #7c8594;
+    --resume_color:#b3efff;
+}
+
 .slider {
     margin: 0;
     font-family: sans-serif;
@@ -27,7 +41,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     text-align: center;
     transform-style: preserve-3d;
-    background-color: #b3efff;
+    background-color: var(--resume_color);
 }
 .controls {
     text-align: center;
@@ -88,7 +102,7 @@
 }
 
 .card-front {
-    background: var(--nav_back_color);
+    background: var(--resume_color);
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -97,7 +111,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    color: white;
+    color: var(--main_color3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,7 +122,7 @@
 }
 
 .card-back {
-    background: var(--nav_back_color);
+    background: var(--resume_color);
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -117,7 +131,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    color: white;
+    color: var(--main_color3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,7 +170,7 @@
     border-radius: 10px;
     font-weight: bold;
     font-size: 0.9rem;
-    color: #fff;
+    color: var(--main_color3);
 }
 .html {
     background: linear-gradient(90deg, #e44d26, #f16529);
@@ -193,19 +207,27 @@
     }
 }
 
+
+
 .education-grid {
-    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding-top: 0;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .swiper {
-    width: 250px;
+      margin-top: 70px;
+      max-width: 400px;
+      height: 480px;
 }
 
 .swiper-slide {
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background: var(--resume_color);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -213,7 +235,7 @@
     justify-content: center;
     padding: 30px 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-    color: #fff;
+    color: var(--main_color3);
     text-align: center;
     position: relative;
 }
@@ -221,7 +243,7 @@
 .swiper-slide i {
     font-size: 50px;
     margin-bottom: 20px;
-    color: #00feba;
+    color: #18e2ac;
 }
 
 .swiper-slide h2 {
@@ -242,18 +264,26 @@
 }
 
 /* Navigation Arrows */
-.swiper-button-next,
-.swiper-button-prev {
-    color: #00feba;
-    width: 60px;
-    height: 60px;
+.swiper-button-next, .swiper-button-prev {
+    color: var(--main_color);
+    width: 70px;
+    height: 70px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     backdrop-filter: blur(5px);
-}
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    font-size: 24px;
+  .swiper-button-next {
+    right: -30%;
+  }
+
+  .swiper-button-prev {
+    left: -30%;
+  }
+
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 30px;
     font-weight: bold;
-}
+  }
