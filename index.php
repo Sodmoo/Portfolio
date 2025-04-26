@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/resume.css">
     <title>Portfolio</title>
 </head>
@@ -237,15 +237,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                     </div>
                 </div>
                 <div class="tab-wrapper portfolio">
-                    <div class="tab-grid portfolio-box project">
-                        <div class="tab-item portfolio-item">
-                            <p>project</p>
+                    <div class="tab-grid portfolio-box">
+                        <div class="portfolio-project">
+                            <p>asfasfsa</p>
                         </div>
                     </div>
-                    <div class="tab-grid portfolio-box service">
-                        <div class="tab-item portfolio-item">
-                            <p>service</p>
-                        </div>
+                    <div class="tab-grid portfolio-box">
+                        
                     </div>
                 </div>
 
@@ -253,12 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
             </section>
         </div>
     </div>
-
-
-
-
-
-
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/resume.js"></script>
