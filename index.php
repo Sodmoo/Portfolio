@@ -236,101 +236,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                         <h3>My Service</h3>
                     </div>
                 </div>
-                <div class="tab-wrapper portfolio">
+                <div class="tab-wrapper work">
                     <div class="tab-grid portfolio-box work active">
                         <div class="tab-item portfolio-item">
-                            <div class="work-slider">
-                            <div class="carousel">
-                                <div class="carousel__body">
-                                    <div class="carousel__prev"><i class="far fa-angle-left"></i>
+                            <div class="parallax-slider" id="parallaxSlider">
+                                <div class="slides" id="slides">
+                                    <div class="slide">
+                                        <img class="bg" src="https://source.unsplash.com/1600x900/?nature,water" alt="Background 1">
+                                        <div class="content">Slide 1</div>
                                     </div>
-                                    <div class="carousel__next"><i class="far fa-angle-right"></i></div>
-                                    <div class="carousel__slider">
-                                        
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>2</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>3</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>4</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>5</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>6</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>7</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>8</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>9</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel__slider__item">
-                                            <div class="item__3d-frame">
-                                                <div class="item__3d-frame__box item__3d-frame__box--front">
-                                                    <h1>10</h1>
-                                                </div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                                                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
-                                            </div>
-                                        </div>
+                                    <div class="slide">
+                                        <img class="bg" src="https://source.unsplash.com/1600x900/?mountains" alt="Background 2">
+                                        <div class="content">Slide 2</div>
+                                    </div>
+                                    <div class="slide">
+                                        <img class="bg" src="https://source.unsplash.com/1600x900/?forest" alt="Background 3">
+                                        <div class="content">Slide 3</div>
+                                    </div>
+                                    <div class="slide">
+                                        <img class="bg" src="https://source.unsplash.com/1600x900/?city" alt="Background 4">
+                                        <div class="content">Slide 4</div>
                                     </div>
                                 </div>
-                            </div>
+
+                                <div class="navigation">
+                                    <button onclick="prevSlide()"><i class='bx bx-chevrons-left'></i></button>
+                                    <button onclick="nextSlide()"><i class='bx bx-chevrons-right'></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -346,16 +278,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
         </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/resume.js"></script>
-    <script src="./js/work.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>;
+    <script src="./js/script.js"></script>;
+    <script src="./js/resume.js"></script>;
     <script
         src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
         type="module">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    </script>;
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>;
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>;
 
     <script>
         AOS.init({
@@ -419,7 +350,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                 prevEl: ".swiper-button-prev",
             }
         });
-    </script>
+    </script>;
+    <script>
+        const slides = document.getElementById('slides');
+        const backgrounds = document.querySelectorAll('.slide .bg');
+        let currentSlide = 0;
+        const totalSlides = backgrounds.length;
+
+        function updateSlider() {
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            backgrounds.forEach((bg, idx) => {
+                bg.style.transform = `translateX(${(idx - currentSlide) * 20}%) scale(1.1)`;
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        // Auto Slide
+        setInterval(() => {
+            nextSlide();
+        }, 8000);
+
+        updateSlider();
+    </script>;
 </body>
 
 </html>
