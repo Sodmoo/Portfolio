@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/resume.css">
+    <link rel="stylesheet" href="./css/resumes.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Portfolio</title>
 </head>
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
 <body>
     <nav class="nav">
         <ul class="nav-list">
-            <li>
+            <li class="active">
                 <i class='bx bx-home'></i>
                 <span class="tooltip">Home</span>
             </li>
@@ -49,12 +49,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
                 <span class="tooltip">Project</span>
             </li>
             <li>
-                <i class='bx bx-message-rounded'></i>
-                <span class="tooltip">Contact</span>
+                
+                <a href="contact.php"><i class='bx bx-message-rounded'></i>
+                <span class="tooltip">Contact</span></a>
             </li>
             <li>
-                <i class='bx bx-log-in'></i>
-                <span class="tooltip">Login</span>
+                <a href="login.php"><i class='bx bx-log-in'></i>
+                <span class="tooltip">Login</span></a>
+                
             </li>
 
         </ul>
@@ -279,7 +281,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['card_text'])) {
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>;
-    <script src="./js/script.js"></script>;
+    <script src="./js/scripts.js"></script>;
     <script src="./js/resume.js"></script>;
     <script
         src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"

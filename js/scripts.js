@@ -30,8 +30,18 @@ function eraseText(){
     }
 }
 window.onload = typeWriter;
+//navbar active
 
+const cube = document.querySelector('.box');
+const navs = document.querySelectorAll('.nav-list li');
+navs.forEach((nav,idx)=>{
+    nav.addEventListener('click',()=>{
+        document.querySelector('.nav-list li.active').classList.remove('active');
+        nav.classList.add('active');
 
+        cube.style.transform = `rotateY(${idx * -90}deg)`;
+    });
+});
 //resume section click tab-list
 const resumelists=document.querySelectorAll('.resume-list');
 const resumeboxs=document.querySelectorAll('.resume-box');
@@ -44,6 +54,7 @@ resumelists.forEach((list,idx)=>{
         resumeboxs[idx].classList.add('active');
     });
 });
+//portfolia section click tab-list
 const portfoliolists=document.querySelectorAll('.portfolio-list');
 const portfolioboxs=document.querySelectorAll('.portfolio-box');
 portfoliolists.forEach((list,idx)=>{
