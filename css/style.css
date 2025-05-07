@@ -61,7 +61,7 @@ p {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 100%;
     padding: 20px 0;
     background-color: var(--nav_back_color);
     border-radius: 15px;
